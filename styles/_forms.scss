@@ -1,0 +1,51 @@
+/* Forms
+-------------------------------------------------------------- */
+input[type="submit"],
+input[type="button"] {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+fieldset {
+  @extend .form-group;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+  @extend .form-control;
+
+  font-size: 0.9375rem;
+}
+
+label {
+  color: $gray-700;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+input[type="file"] {
+  @extend .form-control-file;
+}
+
+select {
+  @extend .custom-select;
+}
+
+.required {
+  color: $red;
+}
