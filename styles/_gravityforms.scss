@@ -83,6 +83,13 @@
     border-color: $form-feedback-invalid-color;
   }
 
+  // Hide anti-spam honeypot
+  .gform_validation_container {
+    display: none !important;
+    position: absolute !important;
+    left: -9000px;
+  }
+
   /* CSS Ready Classes https://www.gravityforms.com/css-ready-classes/
   -------------------------------------------------------------- */
   ul.gform_fields {
