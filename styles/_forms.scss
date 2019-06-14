@@ -28,8 +28,6 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
   @extend .form-control;
-
-  font-size: 0.9375rem;
 }
 
 label {
