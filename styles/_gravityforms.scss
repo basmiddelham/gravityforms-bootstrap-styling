@@ -1,8 +1,8 @@
-@import "chosen";
-
 /* --------------------------------------------------------------
 # Gravity Forms Bootstrap styling
 -------------------------------------------------------------- */
+// @import "chosen"; // Chosen (Optional, Styling for extend Select and Multiselect UI)
+
 .gform_wrapper {
   text-align: left;
   position: relative;
@@ -263,6 +263,22 @@
         float: right;
         font-style: normal;
       }
+    }
+  }
+
+  /* Consent field
+  -------------------------------------------------------------- */
+  .ginput_container_consent {
+    @extend .form-check;
+
+    input[type="checkbox"] {
+      @extend .form-check-input;
+
+      height: auto;
+    }
+
+    .gfield_consent_label {
+      @extend .form-check-label;
     }
   }
 
