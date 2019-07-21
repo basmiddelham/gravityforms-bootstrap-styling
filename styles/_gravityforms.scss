@@ -33,6 +33,13 @@
     font-size: 0.8125em;
   }
 
+  // Labels
+  .gfield_label {
+    color: $gray-700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
+
   // Characters Left
   .charleft {
     color: $gray-600;
@@ -279,6 +286,9 @@
 
     .gfield_consent_label {
       @extend .form-check-label;
+
+      display: inline;
+      font-size: 0.8125rem;
     }
   }
 
@@ -542,7 +552,7 @@
       padding: 0;
 
       a {
-        display: block;
+        display: inline-block;
         text-decoration: none;
       }
     }
