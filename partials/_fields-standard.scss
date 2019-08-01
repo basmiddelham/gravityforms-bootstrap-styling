@@ -1,0 +1,95 @@
+/* Standard Fields
+-------------------------------------------------------------- */
+.gform_wrapper {
+  /* Sections
+  -------------------------------------------------------------- */
+  .gsection {
+    padding-top: 1rem;
+  }
+
+  /* Radio Buttons & Checkboxes
+  -------------------------------------------------------------- */
+  ul.gfield_radio,
+  ul.gfield_checkbox {
+    padding: 0;
+    list-style: none;
+    margin-bottom: $spacer / 4;
+  }
+
+  .gfield .custom-control-label {
+    color: $body-color;
+    line-height: 1.625rem;
+    margin: 0 !important;
+  }
+
+  // Make radio & Checkbox labels bold when checked
+  li.gchoice_select_all,
+  input:checked + {
+    .custom-control-label {
+      font-weight: bold;
+    }
+  }
+
+  /* Textarea
+  -------------------------------------------------------------- */
+  .ginput_container_textarea {
+    .textarea {
+      height: 100px;
+
+      &.form-control-sm {
+        height: 75px;
+      }
+
+      &.form-control-lg {
+        height: 125px;
+      }
+    }
+
+    .charleft {
+      color: $text-muted;
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      white-space: nowrap;
+    }
+  }
+
+  /* Pages
+  -------------------------------------------------------------- */
+  .progress_wrapper {
+    margin-bottom: $form-group-margin-bottom / 2;
+  }
+
+  .progress_title {
+    color: $text-muted;
+    font-size: $font-size-sm;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .gf_page_steps {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px dotted $border-color;
+    font-size: $font-size-sm;
+
+    .gf_step {
+      width: auto;
+      display: inline-block;
+      margin: 0.5rem 2rem 0.5rem 0;
+      opacity: 0.6;
+
+      &.gf_step_active {
+        opacity: 1;
+        font-weight: bold;
+      }
+    }
+  }
+
+  /* Multi Select
+  -------------------------------------------------------------- */
+  select[multiple="multiple"] {
+    font-size: $font-size-sm;
+    max-height: 100px !important;
+  }
+}

@@ -1,0 +1,74 @@
+/* Datepicker
+-------------------------------------------------------------- */
+.ui-datepicker {
+  @extend .shadow-sm;
+
+  background-color: $white;
+  border: $border-width solid $input-border-color;
+  display: none;
+  font-size: $font-size-sm;
+  padding: 0.25rem;
+
+  .ui-datepicker-header {
+    display: flex;
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 30px;
+
+    .ui-icon {
+      @extend .sr-only;
+    }
+  }
+
+  .ui-datepicker-prev {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='18'%3E%3Cpath fill='none' stroke='%23979797' stroke-linecap='square' d='M10 0L1 9l9 9'/%3E%3C/svg%3E");
+  }
+
+  .ui-datepicker-next {
+    order: 1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='18'%3E%3Cpath fill='none' stroke='%23979797' stroke-linecap='square' d='M1 0l9 9-9 9'/%3E%3C/svg%3E");
+  }
+
+  .ui-datepicker-title {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    width: calc(100% - 60px);
+
+    > select {
+      @extend .custom-select;
+      @extend .custom-select-sm;
+
+      border-color: transparent;
+      box-shadow: none;
+      background-color: white;
+      margin: 5px;
+    }
+  }
+
+  .ui-datepicker-calendar {
+    width: 100%;
+    min-width: 240px;
+    font-family: sans-serif;
+
+    td,
+    th {
+      text-align: center;
+
+      a {
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          background-color: $gray-200;
+        }
+      }
+    }
+  }
+}

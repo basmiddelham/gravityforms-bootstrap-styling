@@ -1,0 +1,77 @@
+/* Labels & Descriptions
+-------------------------------------------------------------- */
+.gform_wrapper {
+  // Label styling
+  label {
+    font-size: $font-size-sm;
+    margin-bottom: 0.125rem;
+    color: $text-muted;
+
+    &.gfield_label {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  // Hidden label
+  .hidden_label > .gfield_label {
+    @extend .sr-only;
+  }
+
+  // Description styling
+  .gfield_description {
+    font-size: $font-size-sm;
+  }
+
+  // Description settings
+  .field_description_below .gfield_description {
+    margin-top: 0.125rem;
+  }
+
+  .field_description_above .gfield_description {
+    margin-bottom: 0.125rem;
+  }
+
+  // Sub-label setting
+  .field_sublabel_below {
+    select + label,
+    input + label {
+      margin-top: 0.125rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &.field_sublabel_above {
+    select + label,
+    input + label {
+      margin-bottom: 0.125rem;
+    }
+  }
+
+  // Labels setting
+  &.right_label {
+    .gfield_label {
+      text-align: right;
+    }
+  }
+
+  .gform_fields:not(.top_label) .gfield {
+    > .gfield_label {
+      float: left;
+      width: 25%;
+    }
+
+    > .ginput_container,
+    > .gfield_description {
+      width: 73%;
+      margin-left: 27%;
+    }
+  }
+}
+
+.gform_footer {
+  &.right_label,
+  &.left_label {
+    width: 73%;
+    margin-left: 27%;
+  }
+}

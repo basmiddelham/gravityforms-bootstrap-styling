@@ -1,0 +1,128 @@
+/* Advanced Fields
+-------------------------------------------------------------- */
+.gform_wrapper {
+  /* Consent field
+  -------------------------------------------------------------- */
+  .gfield_consent_description {
+    color: $text-muted;
+    max-height: 120px;
+    border: 1px solid $border-color;
+    margin-top: $spacer / 2;
+    padding: $spacer / 4;
+    overflow-y: auto;
+  }
+
+  .ginput_complex {
+    /* Name field
+    -------------------------------------------------------------- */
+    &.ginput_container_name {
+      > span {
+        @extend .col;
+      }
+
+      .name_prefix,
+      .name_middle,
+      .name_suffix {
+        flex-grow: 0.5;
+      }
+    }
+
+    /* Adress field
+    -------------------------------------------------------------- */
+    &.ginput_container_address {
+      > span {
+        margin-bottom: $form-group-margin-bottom / 2;
+      }
+    }
+  }
+
+  /* Date- & Timefields
+  -------------------------------------------------------------- */
+  .ginput_container_date {
+    position: relative;
+
+    .ui-datepicker-trigger {
+      position: absolute;
+      top: 14px;
+      right: 17px;
+    }
+
+    input.datepicker.datepicker_no_icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' version='1'%3E%3Cpath fill='%23D0D0D0' d='M15 6V3h-2v1a1 1 0 1 1-2 0V3H5v1a1 1 0 1 1-2 0V3H1v3h14zm0 1H1v8h14V7zm-2-5h2l1 1v12l-1 1H1l-1-1V3l1-1h2V1a1 1 0 1 1 2 0v1h6V1a1 1 0 1 1 2 0v1z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: calc(100% - 16px) center;
+    }
+  }
+
+  .clear-multi {
+    display: flex;
+
+    > div:not(:last-child) {
+      margin-right: $form-grid-gutter-width;
+    }
+
+    .gfield_time_hour i {
+      float: right;
+      font-style: normal;
+    }
+  }
+
+  /* Lists
+  -------------------------------------------------------------- */
+  .gfield_list {
+    width: 100%;
+
+    th {
+      color: $text-muted;
+      font-size: $font-size-sm;
+    }
+
+    td {
+      padding-bottom: $form-grid-gutter-width;
+    }
+
+    th,
+    td {
+      &:not(:first-child) {
+        padding-left: $form-grid-gutter-width;
+      }
+    }
+  }
+
+  /* File Upload
+  -------------------------------------------------------------- */
+  .ginput_container_fileupload {
+    .gform_drop_area {
+      background: $gray-100;
+      border-radius: $border-radius;
+      border: $border-width dashed $gray-300;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .gform_drop_instructions {
+      margin-right: 0.625rem;
+      font-size: $font-size-sm;
+    }
+
+    .validation_message {
+      padding: 0;
+      background-color: transparent;
+      border-color: transparent;
+
+      ul {
+        @extend .list-unstyled;
+
+        li {
+          @extend .alert;
+          @extend .alert-warning;
+        }
+      }
+    }
+  }
+
+  .gform_delete {
+    vertical-align: middle;
+    cursor: pointer;
+  }
+}
