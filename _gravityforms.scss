@@ -17,7 +17,6 @@
 .gform_wrapper {
   margin-bottom: $spacer;
   text-align: left;
-  max-width: 52.5rem;
 
   // Form heading.
   .gform_heading {
@@ -59,14 +58,11 @@
   }
 
   .gform_ajax_spinner {
-    display: inline-block;
+    @extend .spinner-border;
+    @extend .spinner-border-sm;
+
+    color: $primary;
     margin-left: 1rem;
-    border: 4px solid rgba($black, 0.1);
-    border-left-color: $primary;
-    border-radius: 50%;
-    width: 1.25rem;
-    height: 1.25rem;
-    animation: ajax-spinner 1.2s linear infinite;
   }
 
   // Hidden
@@ -89,7 +85,7 @@
 
     font-size: $font-size-sm;
     padding: 0.25rem 0.5rem;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     display: block;
   }
 

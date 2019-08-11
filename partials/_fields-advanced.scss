@@ -5,6 +5,7 @@
   -------------------------------------------------------------- */
   .gfield_consent_description {
     color: $text-muted;
+    background-color: $white;
     max-height: 120px;
     border: 1px solid $border-color;
     margin-top: $spacer / 2;
@@ -21,7 +22,6 @@
       }
 
       .name_prefix,
-      .name_middle,
       .name_suffix {
         flex-grow: 0.5;
       }

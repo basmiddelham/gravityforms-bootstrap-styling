@@ -26,7 +26,7 @@
   li.gchoice_select_all,
   input:checked + {
     .custom-control-label {
-      font-weight: bold;
+      font-weight: $font-weight-bold;
     }
   }
 
@@ -81,7 +81,7 @@
 
       &.gf_step_active {
         opacity: 1;
-        font-weight: bold;
+        font-weight: $font-weight-bold;
       }
     }
   }
