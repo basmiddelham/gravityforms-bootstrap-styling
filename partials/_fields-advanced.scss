@@ -14,9 +14,10 @@
     overflow-y: auto;
   }
 
+  /* Complex fields
+  -------------------------------------------------------------- */
   .ginput_complex {
-    /* Name field
-    -------------------------------------------------------------- */
+    // Name field
     &.ginput_container_name {
       > span {
         @extend .col;
@@ -28,8 +29,7 @@
       }
     }
 
-    /* Adress field
-    -------------------------------------------------------------- */
+    // Adress field
     &.ginput_container_address {
       > span {
         margin-bottom: $form-group-margin-bottom / 2;
