@@ -126,3 +126,9 @@
     }
   }
 }
+
+// Confirmation
+.gform_confirmation_wrapper {
+  @extend .alert;
+  @extend .alert-primary;
+}
