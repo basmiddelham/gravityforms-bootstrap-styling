@@ -11,3 +11,5 @@ The easiest way to use these styles is to clone them into your theme and integra
 Please use these styles together with [Gravity Forms Bootstrap Hooks](https://github.com/MoshCat/gravityforms-bootstrap-hooks) for full functionality.
 
 Test your styling using this Gravity Forms [kitchensink form](https://github.com/MoshCat/gravityforms-kitchensink).
+
+Check out the [demo](https://middelham.nl/sagestarter/gravityforms/).
