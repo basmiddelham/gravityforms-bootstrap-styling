@@ -12,4 +12,4 @@ Please use these styles together with [Gravity Forms Bootstrap Hooks](https://gi
 
 Test your styling using this Gravity Forms [kitchensink form](https://github.com/MoshCat/gravityforms-kitchensink).
 
-Check out the [demo](https://middelham.nl/sagestarter/gravityforms/).
+Check out the [demo](https://sagestarter.middelham.nl/gravityforms).
