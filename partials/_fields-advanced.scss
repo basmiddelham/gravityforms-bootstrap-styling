@@ -1,6 +1,7 @@
 /* Advanced Fields
 -------------------------------------------------------------- */
 .gform_wrapper {
+
   /* Consent field
   -------------------------------------------------------------- */
   .gfield_consent_description {
@@ -47,18 +48,31 @@
       right: 17px;
     }
 
-    input.datepicker.datepicker_no_icon {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' version='1'%3E%3Cpath fill='%23D0D0D0' d='M15 6V3h-2v1a1 1 0 1 1-2 0V3H5v1a1 1 0 1 1-2 0V3H1v3h14zm0 1H1v8h14V7zm-2-5h2l1 1v12l-1 1H1l-1-1V3l1-1h2V1a1 1 0 1 1 2 0v1h6V1a1 1 0 1 1 2 0v1z'/%3E%3C/svg%3E");
+    img {
+      display: none;
+    }
+
+    input.datepicker {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' version='1'%3E%3Cpath fill='%23999' d='M15 6V3h-2v1a1 1 0 1 1-2 0V3H5v1a1 1 0 1 1-2 0V3H1v3h14zm0 1H1v8h14V7zm-2-5h2l1 1v12l-1 1H1l-1-1V3l1-1h2V1a1 1 0 1 1 2 0v1h6V1a1 1 0 1 1 2 0v1z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
-      background-position: calc(100% - 16px) center;
+      background-position: calc(100% - 1em) center;
+
+      &.datepicker_no_icon {
+        background-image: none;
+      }
     }
   }
 
   .clear-multi {
     display: flex;
+    flex-flow: row nowrap;
 
-    > div:not(:last-child) {
-      margin-right: $form-grid-gutter-width;
+    > div {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-right: $form-grid-gutter-width;
+      }
     }
 
     .gfield_time_hour i {
@@ -111,6 +125,7 @@
 
     .validation_message {
       padding: 0;
+      margin: 0;
       background-color: transparent;
       border-color: transparent;
 
@@ -130,22 +145,31 @@
     cursor: pointer;
   }
 
-  /* Custom File Upload - Add .preview to field. Javascript required to show filename and preview.
+  /* Custom File Upload - Javascript required to show filename and preview.
   -------------------------------------------------------------- */
-  .ginput_container_fileupload {
-    label:not(.gfield_label) {
-      font-size: $font-size-base;
-      color: $input-color;
-    }
+  // Reset font-size
+  .custom-file-label {
+    font-size: $font-size-base;
   }
 
-  .preview {
-    .ginput_container_fileupload {
-      display: flex;
-      flex-flow: row nowrap;
+  // .ginput_container_fileupload {
+  //   label:not(.gfield_label) {
+  //     font-size: $font-size-base;
+  //     color: $input-color;
+  //   }
+  // }
+
+  .preview > .ginput_container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+
+    .custom-file {
+      height: auto;
     }
+
     .preview_img {
-      width: calc(50% - #{$form-grid-gutter-width});
+      width: calc(40% - #{$form-grid-gutter-width});
       display: block;
       margin: 0 0 .25rem $form-grid-gutter-width;
     }
@@ -159,7 +183,6 @@
       appearance: none;
       background: 0 0;
       border: none;
-      padding: 5px 0;
       position: absolute;
       right: $form-grid-gutter-width / 2;
       text-align: center;
@@ -171,12 +194,21 @@
       background-repeat: no-repeat;
       background-position: center;
 
+      &[label="Hide Password"] {
+        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='currentColor' d='M634 471L36 4a16 16 0 00-22 2L4 18a16 16 0 002 23l598 467a16 16 0 0022-2l10-12a16 16 0 00-2-23zM297 146l135 106c-3-60-52-108-112-108a112 112 0 00-23 2zm46 220L208 260c3 60 52 108 112 108a113 113 0 0023-2zm-23-254c99 0 189 55 238 144a286 286 0 01-44 60l38 30a334 334 0 0053-75 32 32 0 000-30A321 321 0 00320 64c-37 0-72 7-105 19l47 36c19-4 38-7 58-7zm0 288c-99 0-189-55-238-144a285 285 0 0144-60l-38-30a334 334 0 00-53 75 32 32 0 000 30 321 321 0 00285 177c37 0 72-7 105-19l-47-36c-19 4-38 7-58 7z'/%3E%3C/svg%3E");
+      }
+
       .dashicons {
         display: none;
       }
+    }
+  }
 
-      &[label="Hide Password"] {
-        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='currentColor' d='M634 471L36 4a16 16 0 00-22 2L4 18a16 16 0 002 23l598 467a16 16 0 0022-2l10-12a16 16 0 00-2-23zM297 146l135 106c-3-60-52-108-112-108a112 112 0 00-23 2zm46 220L208 260c3 60 52 108 112 108a113 113 0 0023-2zm-23-254c99 0 189 55 238 144a286 286 0 01-44 60l38 30a334 334 0 0053-75 32 32 0 000-30A321 321 0 00320 64c-37 0-72 7-105 19l47 36c19-4 38-7 58-7zm0 288c-99 0-189-55-238-144a285 285 0 0144-60l-38-30a334 334 0 00-53 75 32 32 0 000 30 321 321 0 00285 177c37 0 72-7 105-19l-47-36c-19 4-38 7-58 7z'/%3E%3C/svg%3E");
+  .field_sublabel_above {
+    .ginput_container_password {
+      button {
+        bottom: 0;
+        top: auto;
       }
     }
   }
@@ -188,6 +220,7 @@
     text-align: center;
     background-color: #EEE;
     border-bottom: 3px solid #DDD;
+    padding: 3px;
 
     &.bad {
       background-color: #FFB78C;
