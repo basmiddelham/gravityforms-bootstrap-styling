@@ -26,6 +26,10 @@
     }
   }
 
+  .gform_body {
+    margin-bottom: 1rem;
+  }
+
   // Layout: emulates .form-row class & enables the Bootstrap form-grid.
   ul.gform_fields {
     display: flex;
@@ -79,7 +83,7 @@
   }
 
   .validation_error,
-  .gfield_description.validation_message {
+  .validation_message {
     @extend .alert;
     @extend .alert-warning;
 
