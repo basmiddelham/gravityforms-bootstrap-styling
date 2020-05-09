@@ -26,12 +26,12 @@
   }
 
   .ui-datepicker-prev {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='18'%3E%3Cpath fill='none' stroke='%23979797' stroke-linecap='square' d='M10 0L1 9l9 9'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='18'%3E%3Cpath fill='none' stroke='%23666' stroke-linecap='square' d='M10 0L1 9l9 9'/%3E%3C/svg%3E");
   }
 
   .ui-datepicker-next {
     order: 1;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='18'%3E%3Cpath fill='none' stroke='%23979797' stroke-linecap='square' d='M1 0l9 9-9 9'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='18'%3E%3Cpath fill='none' stroke='%23666' stroke-linecap='square' d='M1 0l9 9-9 9'/%3E%3C/svg%3E");
   }
 
   .ui-datepicker-title {
@@ -55,6 +55,7 @@
     width: 100%;
     min-width: 240px;
     font-family: sans-serif;
+    margin: 0;
 
     td,
     th {
@@ -63,7 +64,6 @@
       a {
         display: block;
         text-decoration: none;
-        font-weight: bold;
 
         &:hover {
           background-color: $gray-200;
