@@ -4,7 +4,13 @@
   /* Sections
   -------------------------------------------------------------- */
   .gsection {
-    padding-top: 1rem;
+    padding-top: 2em;
+
+    h2.gsection_title {
+      border-bottom: 1px solid $gray-400;
+      padding-bottom: 0.125em;
+      margin-bottom: 0.125em;
+    }
   }
 
   /* Radio Buttons & Checkboxes
@@ -17,8 +23,8 @@
   }
 
   .gfield .custom-control-label {
+    font-size: $font-size-base;
     color: $body-color;
-    margin: 0 !important;
   }
 
   // Make radio & Checkbox labels bold when checked
