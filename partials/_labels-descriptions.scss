@@ -1,14 +1,16 @@
 /* Labels & Descriptions
 -------------------------------------------------------------- */
 .gform_wrapper {
+
   // Label styling
   label {
     font-size: $font-size-sm;
-    margin-bottom: 0.125rem;
-    color: $text-muted;
+    margin-bottom: 0;
 
     &.gfield_label {
+      font-size: $font-size-base;
       font-weight: $font-weight-bold;
+      margin-bottom: .25em;
     }
   }
 
@@ -17,22 +19,17 @@
     @extend .sr-only;
   }
 
-  // Description styling
-  .gfield_description {
-    font-size: $font-size-sm;
-  }
-
   // Description settings
   .field_description_below .gfield_description {
-    margin-top: 0.125rem;
+    margin-top: 0.25em;
   }
 
   .field_description_above .gfield_description {
-    margin-bottom: 0.125rem;
+    margin-bottom: 0.25em;
   }
 
   // Sub-label setting
-  .field_sublabel_below {
+  &.field_sublabel_below {
     select + label,
     input + label {
       margin-top: 0.125rem;
