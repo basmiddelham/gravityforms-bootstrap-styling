@@ -121,6 +121,17 @@
   }
 }
 
+// Correct line-height on custom-selects
+.custom-select {
+  &-sm {
+    line-height: $line-height-sm;
+  }
+
+  &-lg {
+    line-height: $line-height-lg;
+  }
+}
+
 // Reset :disabled when viewing the form with shortcode preview
 .mce-content-body {
   .form-control,

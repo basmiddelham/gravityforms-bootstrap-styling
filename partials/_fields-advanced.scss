@@ -39,6 +39,12 @@
 
   /* Date- & Timefields
   -------------------------------------------------------------- */
+  .field_sublabel_hidden_label {
+    i {
+      display: none;
+    }
+  }
+
   .ginput_container_date {
     position: relative;
 
@@ -151,13 +157,6 @@
   .custom-file-label {
     font-size: $font-size-base;
   }
-
-  // .ginput_container_fileupload {
-  //   label:not(.gfield_label) {
-  //     font-size: $font-size-base;
-  //     color: $input-color;
-  //   }
-  // }
 
   .preview > .ginput_container {
     display: flex;

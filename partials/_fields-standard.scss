@@ -94,7 +94,6 @@
   /* Multi Select
   -------------------------------------------------------------- */
   select[multiple="multiple"] {
-    font-size: $font-size-sm;
-    max-height: 100px !important;
+    font-size: 0.9375em;
   }
 }
