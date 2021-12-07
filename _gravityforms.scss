@@ -22,6 +22,7 @@
 	-------------------------------------------------------------- */
 	.gform_fields {
 		@extend .row;
+		@extend .g-3;
 
 		.gfield {
 			@include make-col-ready();
@@ -127,7 +128,7 @@
 
 	.gform_validation_errors {
 		@extend .alert;
-		@extend .alert-info;
+		@extend .alert-warning;
 		font-size: $font-size-sm;
 
 		.gform_submission_error {
