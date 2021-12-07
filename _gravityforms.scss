@@ -15,172 +15,172 @@
 @import "partials/datepicker";
 
 .gform_wrapper {
-	margin-bottom: $spacer;
-	text-align: left;
+    margin-bottom: $spacer;
+    text-align: left;
 
-	/* Layout
-	-------------------------------------------------------------- */
-	.gform_fields {
-		@extend .row;
-		@extend .g-3;
+    /* Layout
+    -------------------------------------------------------------- */
+    .gform_fields {
+        @extend .row;
+        @extend .g-3;
 
-		.gfield {
-			@include make-col-ready();
-			@extend .mb-3;
-		}
-		.gfield--width-quarter {
-			@include media-breakpoint-up(sm) {
-				@include make-col(6);
-			}
-			@include media-breakpoint-up(md) {
-				@include make-col(3);
-			}
-		}
+        .gfield {
+            @include make-col-ready();
+            @extend .mb-3;
+        }
+        .gfield--width-quarter {
+            @include media-breakpoint-up(sm) {
+                @include make-col(6);
+            }
+            @include media-breakpoint-up(md) {
+                @include make-col(3);
+            }
+        }
 
-		.gfield--width-third {
-			@include media-breakpoint-up(md) {
-				@include make-col(4);
-			}
-		}
-		.gfield--width-five-twelfths {
-			@include media-breakpoint-up(md) {
-				@include make-col(5);
-			}
-		}
-		.gfield--width-half {
-			@include media-breakpoint-up(md) {
-				@include make-col(6);
-			}
-		}
-		.gfield--width-seven-twelfths {
-			@include media-breakpoint-up(md) {
-				@include make-col(7);
-			}
-		}
-		.gfield--width-two-thirds {
-			@include media-breakpoint-up(md) {
-				@include make-col(8);
-			}
-		}
-		.gfield--width-three-quarter {
-			@include media-breakpoint-up(md) {
-				@include make-col(9);
-			}
-		}
-		.gfield--width-five-sixths {
-			@include media-breakpoint-up(md) {
-				@include make-col(10);
-			}
-		}
-		.gfield--width-eleven-twelfths {
-			@include media-breakpoint-up(md) {
-				@include make-col(11);
-			}
-		}
-		.gfield--width-full {
-			@include media-breakpoint-up(md) {
-				@include make-col(12);
-			}
-		}
-	}
+        .gfield--width-third {
+            @include media-breakpoint-up(md) {
+                @include make-col(4);
+            }
+        }
+        .gfield--width-five-twelfths {
+            @include media-breakpoint-up(md) {
+                @include make-col(5);
+            }
+        }
+        .gfield--width-half {
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+        }
+        .gfield--width-seven-twelfths {
+            @include media-breakpoint-up(md) {
+                @include make-col(7);
+            }
+        }
+        .gfield--width-two-thirds {
+            @include media-breakpoint-up(md) {
+                @include make-col(8);
+            }
+        }
+        .gfield--width-three-quarter {
+            @include media-breakpoint-up(md) {
+                @include make-col(9);
+            }
+        }
+        .gfield--width-five-sixths {
+            @include media-breakpoint-up(md) {
+                @include make-col(10);
+            }
+        }
+        .gfield--width-eleven-twelfths {
+            @include media-breakpoint-up(md) {
+                @include make-col(11);
+            }
+        }
+        .gfield--width-full {
+            @include media-breakpoint-up(md) {
+                @include make-col(12);
+            }
+        }
+    }
 
-	/* Heading
-	-------------------------------------------------------------- */
-	.gform_heading {
-		.gform_description {
-			display: block;
-			margin-bottom: $paragraph-margin-bottom;
-		}
-	}
+    /* Heading
+    -------------------------------------------------------------- */
+    .gform_heading {
+        .gform_description {
+            display: block;
+            margin-bottom: $paragraph-margin-bottom;
+        }
+    }
 
-	.gform_body {
-		margin-bottom: 1rem;
-	}
+    .gform_body {
+        margin-bottom: 1rem;
+    }
 
- 	// Custom Ajax Spinner.
-	@keyframes ajax-spinner {
-		0% {
-			transform: rotate(0deg);
-		}
-		100% {
-			transform: rotate(360deg);
-		}
-	}
+     // Custom Ajax Spinner.
+    @keyframes ajax-spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 
-	.gform_ajax_spinner {
-		@extend .spinner-border;
-		@extend .spinner-border-sm;
+    .gform_ajax_spinner {
+        @extend .spinner-border;
+        @extend .spinner-border-sm;
 
-		color: $primary;
-		margin-left: 1rem;
-	}
+        color: $primary;
+        margin-left: 1rem;
+    }
 
-	// Hidden
-	.gform_validation_container, // anti-spam honeypot
-	.gform_hidden {
-		@extend .visually-hidden;
-	}
+    // Hidden
+    .gform_validation_container, // anti-spam honeypot
+    .gform_hidden {
+        @extend .visually-hidden;
+    }
 
-	// Validation
-	.gfield_required {
-		color: $danger;
-	}
+    // Validation
+    .gfield_required {
+        color: $danger;
+    }
 
-	.gform_validation_errors {
-		@extend .alert;
-		@extend .alert-warning;
-		font-size: $font-size-sm;
+    .gform_validation_errors {
+        @extend .alert;
+        @extend .alert-warning;
+        font-size: $font-size-sm;
 
-		.gform_submission_error {
-			font-size: $font-size-sm;
-		}
+        .gform_submission_error {
+            font-size: $font-size-sm;
+        }
 
-		ol {
-			margin: 0;
-		}
+        ol {
+            margin: 0;
+        }
 
-		.gform_validation_error_link {
-			@extend .alert-link;
-			font-weight: normal;
-		}
-	}
+        .gform_validation_error_link {
+            @extend .alert-link;
+            font-weight: normal;
+        }
+    }
 
-	select[aria-invalid="true"],
-	textarea[aria-invalid="true"],
-	input[aria-invalid="true"] {
-		border-color: rgba($form-feedback-invalid-color, 0.5);
-	}
+    select[aria-invalid="true"],
+    textarea[aria-invalid="true"],
+    input[aria-invalid="true"] {
+        border-color: rgba($form-feedback-invalid-color, 0.5);
+    }
 }
 
 // Widget
 .gform_widget {
-	textarea,
-	input[type="text"],
-	input[type="email"],
-	input[type="url"],
-	input[type="search"],
-	input[type="number"],
-	input[type="tel"] {
-		@extend .form-control-sm;
-	}
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="number"],
+    input[type="tel"] {
+        @extend .form-control-sm;
+    }
 
-	.gform_button {
-		@extend .btn-sm;
-	}
+    .gform_button {
+        @extend .btn-sm;
+    }
 }
 
 // Reset :disabled when viewing the form with shortcode preview
 .mce-content-body {
-	.form-control,
-	.form-select {
-		&:disabled {
-			background-color: $input-bg;
-		}
-	}
+    .form-control,
+    .form-select {
+        &:disabled {
+            background-color: $input-bg;
+        }
+    }
 }
 
 // Confirmation
 .gform_confirmation_wrapper {
-	@extend .alert;
-	@extend .alert-secondary;
+    @extend .alert;
+    @extend .alert-secondary;
 }
