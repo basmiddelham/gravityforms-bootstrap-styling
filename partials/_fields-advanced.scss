@@ -8,8 +8,8 @@
         background-color: $white;
         max-height: 100px;
         border: 1px solid $border-color;
-        margin-top: $spacer / 2;
-        padding: $spacer / 4;
+        margin-top: $spacer * 0.5;
+        padding: $spacer * 0.25;
         overflow-y: auto;
     }
 
@@ -51,8 +51,8 @@
         }
     }
 
-    // /* Lists
-    // -------------------------------------------------------------- */
+    /* Lists
+    -------------------------------------------------------------- */
     .gfield_list_icons button {
         font-size: 0;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-444 448 256 256'%3E%3Cpath d='M-316 448a128 128 0 1 0 0 256 128 128 0 0 0 0-256zm0 224a96 96 0 1 1 0-192 96 96 0 0 1 0 192z'/%3E%3Cpath d='M-332 512v48h-48v32h48v48h32v-48h48v-32h-48v-48z'/%3E%3C/svg%3E");
@@ -108,7 +108,7 @@
             background: 0 0;
             border: none;
             position: absolute;
-            right: $grid-gutter-width / 2;
+            right: $grid-gutter-width * 0.5;
             text-align: center;
             top: 0;
             right: 0;
@@ -128,15 +128,6 @@
             }
         }
     }
-
-    // .field_sublabel_above {
-    // 	.ginput_container_password {
-    // 		button {
-    // 			bottom: 0;
-    // 			top: auto;
-    // 		}
-    // 	}
-    // }
 
     .gfield_password_strength {
         font-size: $font-size-sm;

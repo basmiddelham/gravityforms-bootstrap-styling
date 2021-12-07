@@ -152,7 +152,8 @@
     }
 }
 
-// Widget
+/* Widget
+-------------------------------------------------------------- */
 .gform_widget {
     textarea,
     input[type="text"],
@@ -169,7 +170,8 @@
     }
 }
 
-// Reset :disabled when viewing the form with shortcode preview
+/* Reset :disabled when viewing the form with shortcode preview
+-------------------------------------------------------------- */
 .mce-content-body {
     .form-control,
     .form-select {
@@ -179,7 +181,8 @@
     }
 }
 
-// Confirmation
+/* Confirmation
+-------------------------------------------------------------- */
 .gform_confirmation_wrapper {
     @extend .alert;
     @extend .alert-secondary;
