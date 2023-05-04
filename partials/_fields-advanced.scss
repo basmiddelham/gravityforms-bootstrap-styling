@@ -1,7 +1,6 @@
 /* Advanced Fields
 -------------------------------------------------------------- */
 .gform_wrapper {
-
     /* Consent field
     -------------------------------------------------------------- */
     .gfield_consent_description {
@@ -93,6 +92,7 @@
     .gform_delete_file {
         @extend .btn;
         @extend .btn-link;
+
         text-decoration: none;
     }
 
@@ -103,12 +103,10 @@
         display: block;
 
         button {
-            -webkit-appearance: none;
             appearance: none;
             background: 0 0;
             border: none;
             position: absolute;
-            right: $grid-gutter-width * 0.5;
             text-align: center;
             top: 0;
             right: 0;

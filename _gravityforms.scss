@@ -25,13 +25,15 @@
         @extend .g-3;
 
         .gfield {
-            @include make-col-ready();
+            @include make-col-ready;
             @extend .mb-3;
         }
+
         .gfield--width-quarter {
             @include media-breakpoint-up(sm) {
                 @include make-col(6);
             }
+
             @include media-breakpoint-up(md) {
                 @include make-col(3);
             }
@@ -42,41 +44,49 @@
                 @include make-col(4);
             }
         }
+
         .gfield--width-five-twelfths {
             @include media-breakpoint-up(md) {
                 @include make-col(5);
             }
         }
+
         .gfield--width-half {
             @include media-breakpoint-up(md) {
                 @include make-col(6);
             }
         }
+
         .gfield--width-seven-twelfths {
             @include media-breakpoint-up(md) {
                 @include make-col(7);
             }
         }
+
         .gfield--width-two-thirds {
             @include media-breakpoint-up(md) {
                 @include make-col(8);
             }
         }
+
         .gfield--width-three-quarter {
             @include media-breakpoint-up(md) {
                 @include make-col(9);
             }
         }
+
         .gfield--width-five-sixths {
             @include media-breakpoint-up(md) {
                 @include make-col(10);
             }
         }
+
         .gfield--width-eleven-twelfths {
             @include media-breakpoint-up(md) {
                 @include make-col(11);
             }
         }
+
         .gfield--width-full {
             @include media-breakpoint-up(md) {
                 @include make-col(12);
@@ -102,6 +112,7 @@
         0% {
             transform: rotate(0deg);
         }
+
         100% {
             transform: rotate(360deg);
         }
@@ -129,6 +140,7 @@
     .gform_validation_errors {
         @extend .alert;
         @extend .alert-warning;
+
         font-size: $font-size-sm;
 
         .gform_submission_error {
@@ -141,6 +153,7 @@
 
         .gform_validation_error_link {
             @extend .alert-link;
+
             font-weight: normal;
         }
     }
