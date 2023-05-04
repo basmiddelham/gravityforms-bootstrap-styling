@@ -1,59 +1,59 @@
 /* Standard Fields
 -------------------------------------------------------------- */
 .gform_wrapper {
-    /* Sections
-    -------------------------------------------------------------- */
-    .gsection {
-        padding-top: 2em;
+  /* Sections
+  -------------------------------------------------------------- */
+  .gsection {
+    padding-top: 2em;
 
-        .gsection_title {
-            border-bottom: 1px solid $gray-400;
-            padding-bottom: 0.125em;
-            margin-bottom: 0.125em;
-        }
+    .gsection_title {
+      border-bottom: 1px solid $gray-400;
+      padding-bottom: 0.125em;
+      margin-bottom: 0.125em;
     }
+  }
 
-    /* Textarea
-    -------------------------------------------------------------- */
-    .ginput_container_textarea {
-        .charleft {
-            font-size: 0.75rem;
-            margin-top: 0.25rem;
-            font-weight: bold;
-            white-space: nowrap;
-        }
+  /* Textarea
+  -------------------------------------------------------------- */
+  .ginput_container_textarea {
+    .charleft {
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      font-weight: bold;
+      white-space: nowrap;
     }
+  }
 
-    /* Pages
-    -------------------------------------------------------------- */
-    .gf_progressbar_title {
-        color: $text-muted;
-        font-size: $font-size-sm;
-        font-weight: normal;
-        text-transform: uppercase;
+  /* Pages
+  -------------------------------------------------------------- */
+  .gf_progressbar_title {
+    color: $text-muted;
+    font-size: $font-size-sm;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .gf_page_steps {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px dotted $border-color;
+    font-size: $font-size-sm;
+
+    .gf_step {
+      width: auto;
+      display: inline-block;
+      margin: 0.5rem 2rem 0.5rem 0;
+      opacity: 0.6;
+
+      span {
+        margin: 0 0.125rem;
+      }
+
+      &.gf_step_active {
+        opacity: 1;
+        font-weight: $font-weight-bold;
+      }
     }
-
-    .gf_page_steps {
-        width: 100%;
-        margin-bottom: 0.5rem;
-        padding-bottom: 0.25rem;
-        border-bottom: 1px dotted $border-color;
-        font-size: $font-size-sm;
-
-        .gf_step {
-            width: auto;
-            display: inline-block;
-            margin: 0.5rem 2rem 0.5rem 0;
-            opacity: 0.6;
-
-            span {
-                margin: 0 0.125rem;
-            }
-
-            &.gf_step_active {
-                opacity: 1;
-                font-weight: $font-weight-bold;
-            }
-        }
-    }
+  }
 }

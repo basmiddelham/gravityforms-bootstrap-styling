@@ -1,77 +1,77 @@
 /* Labels & Descriptions
 -------------------------------------------------------------- */
 .gform_wrapper {
-    // Label styling
+  // Label styling
+  .gfield_label {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.25em;
+  }
+
+  // Hidden label
+  .hidden_label > .gfield_label {
+    @extend .visually-hidden;
+  }
+
+  // Hidden sublabel
+  .field_sublabel_hidden_label label {
+    @extend .visually-hidden;
+  }
+
+  .gfield_description {
+    line-height: 1.3;
+  }
+
+  // Description settings
+  .field_description_below .gfield_description {
+    margin-top: 0.25em;
+  }
+
+  .field_description_above .gfield_description {
+    margin-bottom: 0.25em;
+  }
+
+  // Sub-label setting
+  &.field_sublabel_below {
+    select + label,
+    input + label {
+      margin-top: 0.125rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &.field_sublabel_above {
+    select + label,
+    input + label {
+      margin-bottom: 0.125rem;
+    }
+  }
+
+  // Labels setting
+  &.right_label {
     .gfield_label {
-        font-size: $font-size-base;
-        font-weight: $font-weight-bold;
-        margin-bottom: 0.25em;
+      text-align: right;
+    }
+  }
+
+  .gform_fields:not(.top_label) .gfield {
+    > .gfield_label {
+      float: left;
+      width: 25%;
     }
 
-    // Hidden label
-    .hidden_label > .gfield_label {
-        @extend .visually-hidden;
+    > .ginput_container,
+    > .gfield_description {
+      width: 73%;
+      margin-left: 27%;
     }
-
-    // Hidden sublabel
-    .field_sublabel_hidden_label label {
-        @extend .visually-hidden;
-    }
-
-    .gfield_description {
-        line-height: 1.3;
-    }
-
-    // Description settings
-    .field_description_below .gfield_description {
-        margin-top: 0.25em;
-    }
-
-    .field_description_above .gfield_description {
-        margin-bottom: 0.25em;
-    }
-
-    // Sub-label setting
-    &.field_sublabel_below {
-        select + label,
-        input + label {
-            margin-top: 0.125rem;
-            margin-bottom: 0;
-        }
-    }
-
-    &.field_sublabel_above {
-        select + label,
-        input + label {
-            margin-bottom: 0.125rem;
-        }
-    }
-
-    // Labels setting
-    &.right_label {
-        .gfield_label {
-            text-align: right;
-        }
-    }
-
-    .gform_fields:not(.top_label) .gfield {
-        > .gfield_label {
-            float: left;
-            width: 25%;
-        }
-
-        > .ginput_container,
-        > .gfield_description {
-            width: 73%;
-            margin-left: 27%;
-        }
-    }
+  }
 }
 
 .gform_footer {
-    &.right_label,
-    &.left_label {
-        width: 73%;
-        margin-left: 27%;
-    }
+  &.right_label,
+  &.left_label {
+    width: 73%;
+    margin-left: 27%;
+  }
 }

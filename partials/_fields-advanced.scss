@@ -1,164 +1,164 @@
 /* Advanced Fields
 -------------------------------------------------------------- */
 .gform_wrapper {
-    /* Consent field
-    -------------------------------------------------------------- */
-    .gfield_consent_description {
-        background-color: $white;
-        max-height: 100px;
-        border: 1px solid $border-color;
-        margin-top: $spacer * 0.5;
-        padding: $spacer * 0.25;
-        overflow-y: auto;
+  /* Consent field
+  -------------------------------------------------------------- */
+  .gfield_consent_description {
+    background-color: $white;
+    max-height: 100px;
+    border: 1px solid $border-color;
+    margin-top: $spacer * 0.5;
+    padding: $spacer * 0.25;
+    overflow-y: auto;
+  }
+
+  /* Complex fields
+  -------------------------------------------------------------- */
+  .ginput_complex {
+    // Name field
+    &.ginput_container_name {
+      .name_prefix,
+      .name_suffix {
+        flex-grow: 0.5;
+      }
+    }
+  }
+
+  // /* Date- & Timefields
+  // -------------------------------------------------------------- */
+  .ginput_container_date {
+    position: relative;
+
+    .ui-datepicker-trigger {
+      position: absolute;
+      top: 14px;
+      right: 17px;
     }
 
-    /* Complex fields
-    -------------------------------------------------------------- */
-    .ginput_complex {
-        // Name field
-        &.ginput_container_name {
-            .name_prefix,
-            .name_suffix {
-                flex-grow: 0.5;
-            }
-        }
+    img {
+      display: none;
     }
 
-    // /* Date- & Timefields
-    // -------------------------------------------------------------- */
-    .ginput_container_date {
-        position: relative;
+    input.datepicker {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' version='1'%3E%3Cpath fill='%23999' d='M15 6V3h-2v1a1 1 0 1 1-2 0V3H5v1a1 1 0 1 1-2 0V3H1v3h14zm0 1H1v8h14V7zm-2-5h2l1 1v12l-1 1H1l-1-1V3l1-1h2V1a1 1 0 1 1 2 0v1h6V1a1 1 0 1 1 2 0v1z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1em) center;
 
-        .ui-datepicker-trigger {
-            position: absolute;
-            top: 14px;
-            right: 17px;
-        }
+      &.datepicker_no_icon {
+        background-image: none;
+      }
+    }
+  }
 
-        img {
-            display: none;
-        }
+  /* Lists
+  -------------------------------------------------------------- */
+  .gfield_list_icons button {
+    font-size: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-444 448 256 256'%3E%3Cpath d='M-316 448a128 128 0 1 0 0 256 128 128 0 0 0 0-256zm0 224a96 96 0 1 1 0-192 96 96 0 0 1 0 192z'/%3E%3Cpath d='M-332 512v48h-48v32h48v48h32v-48h48v-32h-48v-48z'/%3E%3C/svg%3E");
+    border: none;
+    width: 16px;
+    height: 16px;
+    opacity: .5;
+    padding: 0;
+    transition: opacity .5s ease-out;
 
-        input.datepicker {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' version='1'%3E%3Cpath fill='%23999' d='M15 6V3h-2v1a1 1 0 1 1-2 0V3H5v1a1 1 0 1 1-2 0V3H1v3h14zm0 1H1v8h14V7zm-2-5h2l1 1v12l-1 1H1l-1-1V3l1-1h2V1a1 1 0 1 1 2 0v1h6V1a1 1 0 1 1 2 0v1z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: calc(100% - 1em) center;
+    &.delete_list_item {
+      margin-left: 5px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-139 51 512 512'%3E%3Cpath d='M117 51a256 256 0 1 0 0 512 256 256 0 0 0 0-512zm0 448a192 192 0 1 1 0-384 192 192 0 0 1 0 384zM-11 339h256v-64H-11v64z'/%3E%3C/svg%3E");
+    }
+  }
 
-            &.datepicker_no_icon {
-                background-image: none;
-            }
-        }
+  /* File Upload
+  -------------------------------------------------------------- */
+  .ginput_container_fileupload {
+    .gform_fileupload_multifile {
+      width: 100%;
     }
 
-    /* Lists
-    -------------------------------------------------------------- */
-    .gfield_list_icons button {
-        font-size: 0;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-444 448 256 256'%3E%3Cpath d='M-316 448a128 128 0 1 0 0 256 128 128 0 0 0 0-256zm0 224a96 96 0 1 1 0-192 96 96 0 0 1 0 192z'/%3E%3Cpath d='M-332 512v48h-48v32h48v48h32v-48h48v-32h-48v-48z'/%3E%3C/svg%3E");
-        border: none;
-        width: 16px;
-        height: 16px;
-        opacity: .5;
-        padding: 0;
-        transition: opacity .5s ease-out;
-
-        &.delete_list_item {
-            margin-left: 5px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-139 51 512 512'%3E%3Cpath d='M117 51a256 256 0 1 0 0 512 256 256 0 0 0 0-512zm0 448a192 192 0 1 1 0-384 192 192 0 0 1 0 384zM-11 339h256v-64H-11v64z'/%3E%3C/svg%3E");
-        }
+    .gform_drop_area {
+      background: $gray-200;
+      border-radius: $border-radius;
+      border: $border-width dashed $border-color;
+      padding: 2rem;
+      text-align: center;
     }
 
-    /* File Upload
-    -------------------------------------------------------------- */
-    .ginput_container_fileupload {
-        .gform_fileupload_multifile {
-            width: 100%;
-        }
+    .gform_drop_instructions {
+      margin-right: 0.625rem;
+      font-size: $font-size-sm;
+    }
+  }
 
-        .gform_drop_area {
-            background: $gray-200;
-            border-radius: $border-radius;
-            border: $border-width dashed $border-color;
-            padding: 2rem;
-            text-align: center;
-        }
+  .gform_delete_file {
+    @extend .btn;
+    @extend .btn-link;
 
-        .gform_drop_instructions {
-            margin-right: 0.625rem;
-            font-size: $font-size-sm;
-        }
+    text-decoration: none;
+  }
+
+  /* Password
+  -------------------------------------------------------------- */
+  .password_input_container {
+    position: relative;
+    display: block;
+
+    button {
+      appearance: none;
+      background: 0 0;
+      border: none;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: $input-height;
+      background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath d='M288 144a111 111 0 00-31 5 55 55 0 017 27 56 56 0 01-56 56 55 55 0 01-27-7 112 112 0 10107-81zm285 97C518 136 411 64 288 64S58 136 3 241a32 32 0 000 30c55 105 162 177 285 177s230-72 285-177a32 32 0 000-30zM288 400c-99 0-189-55-238-144 49-89 139-144 238-144s189 55 238 144a272 272 0 01-238 144z'/%3E%3C/svg%3E");
+      background-size: 20px 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &[label="Hide Password"] {
+        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='currentColor' d='M634 471L36 4a16 16 0 00-22 2L4 18a16 16 0 002 23l598 467a16 16 0 0022-2l10-12a16 16 0 00-2-23zM297 146l135 106c-3-60-52-108-112-108a112 112 0 00-23 2zm46 220L208 260c3 60 52 108 112 108a113 113 0 0023-2zm-23-254c99 0 189 55 238 144a286 286 0 01-44 60l38 30a334 334 0 0053-75 32 32 0 000-30A321 321 0 00320 64c-37 0-72 7-105 19l47 36c19-4 38-7 58-7zm0 288c-99 0-189-55-238-144a285 285 0 0144-60l-38-30a334 334 0 00-53 75 32 32 0 000 30 321 321 0 00285 177c37 0 72-7 105-19l-47-36c-19 4-38 7-58 7z'/%3E%3C/svg%3E");
+      }
+
+      .dashicons {
+        display: none;
+      }
+    }
+  }
+
+  .gfield_password_strength {
+    font-size: $font-size-sm;
+    border: 1px solid $border-color;
+    margin: $grid-gutter-width 0 0;
+    text-align: center;
+    background-color: #EEE;
+    border-bottom: 3px solid #DDD;
+    padding: 3px;
+
+    &.bad {
+      background-color: #FFB78C;
+      border-color: #FF853C;
+      border-bottom: 3px solid #FF853C
     }
 
-    .gform_delete_file {
-        @extend .btn;
-        @extend .btn-link;
-
-        text-decoration: none;
+    &.good {
+      background-color: #FFEC8b;
+      border-color: #FC0;
+      border-bottom: 3px solid #FC0
     }
 
-    /* Password
-    -------------------------------------------------------------- */
-    .password_input_container {
-        position: relative;
-        display: block;
-
-        button {
-            appearance: none;
-            background: 0 0;
-            border: none;
-            position: absolute;
-            text-align: center;
-            top: 0;
-            right: 0;
-            width: 40px;
-            height: $input-height;
-            background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath d='M288 144a111 111 0 00-31 5 55 55 0 017 27 56 56 0 01-56 56 55 55 0 01-27-7 112 112 0 10107-81zm285 97C518 136 411 64 288 64S58 136 3 241a32 32 0 000 30c55 105 162 177 285 177s230-72 285-177a32 32 0 000-30zM288 400c-99 0-189-55-238-144 49-89 139-144 238-144s189 55 238 144a272 272 0 01-238 144z'/%3E%3C/svg%3E");
-            background-size: 20px 15px;
-            background-repeat: no-repeat;
-            background-position: center;
-
-            &[label="Hide Password"] {
-                background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='currentColor' d='M634 471L36 4a16 16 0 00-22 2L4 18a16 16 0 002 23l598 467a16 16 0 0022-2l10-12a16 16 0 00-2-23zM297 146l135 106c-3-60-52-108-112-108a112 112 0 00-23 2zm46 220L208 260c3 60 52 108 112 108a113 113 0 0023-2zm-23-254c99 0 189 55 238 144a286 286 0 01-44 60l38 30a334 334 0 0053-75 32 32 0 000-30A321 321 0 00320 64c-37 0-72 7-105 19l47 36c19-4 38-7 58-7zm0 288c-99 0-189-55-238-144a285 285 0 0144-60l-38-30a334 334 0 00-53 75 32 32 0 000 30 321 321 0 00285 177c37 0 72-7 105-19l-47-36c-19 4-38 7-58 7z'/%3E%3C/svg%3E");
-            }
-
-            .dashicons {
-                display: none;
-            }
-        }
+    &.mismatch,
+    &.short {
+      background-color: #FFA0A0;
+      border-color: #f04040;
+      border-bottom: 3px solid #f04040
     }
 
-    .gfield_password_strength {
-        font-size: $font-size-sm;
-        border: 1px solid $border-color;
-        margin: $grid-gutter-width 0 0;
-        text-align: center;
-        background-color: #EEE;
-        border-bottom: 3px solid #DDD;
-        padding: 3px;
-
-        &.bad {
-            background-color: #FFB78C;
-            border-color: #FF853C;
-            border-bottom: 3px solid #FF853C
-        }
-
-        &.good {
-            background-color: #FFEC8b;
-            border-color: #FC0;
-            border-bottom: 3px solid #FC0
-        }
-
-        &.mismatch,
-        &.short {
-            background-color: #FFA0A0;
-            border-color: #f04040;
-            border-bottom: 3px solid #f04040
-        }
-
-        &.strong {
-            background-color: #C3FF88;
-            border-color: #8DFF1C;
-            border-bottom: 3px solid #8DFF1C
-        }
+    &.strong {
+      background-color: #C3FF88;
+      border-color: #8DFF1C;
+      border-bottom: 3px solid #8DFF1C
     }
+  }
 }
