@@ -77,13 +77,13 @@
 
     // Margins.
     .gfield_list_group {
-      margin-bottom: .75rem;
+      margin-bottom: 0.75rem;
     }
 
     @include media-breakpoint-up(sm) {
       .gform-field-label + .gform-field-label,
       .gfield_list_group_item + .gfield_list_group_item {
-        margin-left: .75rem;
+        margin-left: 0.75rem;
       }
     }
 
@@ -98,9 +98,9 @@
         display: block;
         margin-bottom: 16px;
         padding: 16px;
-  
+
         .gfield_list_group_item {
-          margin-bottom: .75rem;
+          margin-bottom: 0.75rem;
 
           &::before {
             content: attr(data-label);
@@ -121,7 +121,7 @@
             height: 20px;
 
             &.delete_list_item {
-              margin-left: .5rem;
+              margin-left: 0.5rem;
             }
           }
         }
@@ -140,10 +140,10 @@
         border: none;
         width: 16px;
         height: 16px;
-        opacity: .5;
+        opacity: 0.5;
         padding: 0;
-        transition: opacity .5s ease-out;
-    
+        transition: opacity 0.5s ease-out;
+
         &.delete_list_item {
           margin-left: 5px;
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-139 51 512 512'%3E%3Cpath d='M117 51a256 256 0 1 0 0 512 256 256 0 0 0 0-512zm0 448a192 192 0 1 1 0-384 192 192 0 0 1 0 384zM-11 339h256v-64H-11v64z'/%3E%3C/svg%3E");
@@ -155,8 +155,17 @@
   /* File Upload.
   -------------------------------------------------------------- */
   .ginput_container_fileupload {
+    .validation_message--hidden-on-empty:empty {
+      display: none;
+    }
+
     .gform_fileupload_multifile {
       width: 100%;
+
+      .gfield_validation_message {
+        @extend .alert;
+        @extend .alert-warning;
+      }
     }
 
     .gform_drop_area {
@@ -216,33 +225,33 @@
     border: 1px solid $border-color;
     margin: $grid-gutter-width 0 0;
     text-align: center;
-    background-color: #EEE;
-    border-bottom: 3px solid #DDD;
+    background-color: #eee;
+    border-bottom: 3px solid #ddd;
     padding: 3px;
 
     &.bad {
-      background-color: #FFB78C;
-      border-color: #FF853C;
-      border-bottom: 3px solid #FF853C
+      background-color: #ffb78c;
+      border-color: #ff853c;
+      border-bottom: 3px solid #ff853c;
     }
 
     &.good {
-      background-color: #FFEC8b;
-      border-color: #FC0;
-      border-bottom: 3px solid #FC0
+      background-color: #ffec8b;
+      border-color: #fc0;
+      border-bottom: 3px solid #fc0;
     }
 
     &.mismatch,
     &.short {
-      background-color: #FFA0A0;
+      background-color: #ffa0a0;
       border-color: #f04040;
-      border-bottom: 3px solid #f04040
+      border-bottom: 3px solid #f04040;
     }
 
     &.strong {
-      background-color: #C3FF88;
-      border-color: #8DFF1C;
-      border-bottom: 3px solid #8DFF1C
+      background-color: #c3ff88;
+      border-color: #8dff1c;
+      border-bottom: 3px solid #8dff1c;
     }
   }
 }

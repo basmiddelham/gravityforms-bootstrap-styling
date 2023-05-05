@@ -26,6 +26,10 @@
 
   /* Pages
   -------------------------------------------------------------- */
+  .gf_progressbar_wrapper {
+    @extend .mb-2;
+  }
+
   .gf_progressbar_title {
     color: $text-muted;
     font-size: $font-size-sm;

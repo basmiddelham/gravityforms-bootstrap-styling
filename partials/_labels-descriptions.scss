@@ -24,18 +24,18 @@
 
   // Description settings
   .field_description_below .gfield_description {
-    margin-top: 0.25em;
+    margin-top: 0.375em;
   }
 
   .field_description_above .gfield_description {
-    margin-bottom: 0.25em;
+    margin-bottom: 0.375em;
   }
 
   // Sub-label setting
   &.field_sublabel_below {
     select + label,
     input + label {
-      margin-top: 0.125rem;
+      margin-top: 0.25em;
       margin-bottom: 0;
     }
   }
@@ -43,7 +43,7 @@
   &.field_sublabel_above {
     select + label,
     input + label {
-      margin-bottom: 0.125rem;
+      margin-bottom: 0.25em;
     }
   }
 

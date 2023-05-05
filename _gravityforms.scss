@@ -22,11 +22,13 @@
   -------------------------------------------------------------- */
   .gform_fields {
     @extend .row;
-    @extend .g-3;
+    @extend .gx-3;
 
     .gfield {
       @include make-col-ready;
       @extend .mb-3;
+
+      margin-top: 0;
     }
 
     .gfield--width-quarter {
@@ -94,9 +96,13 @@
     }
   }
 
-  /* Heading
+  /* General.
   -------------------------------------------------------------- */
   .gform_heading {
+    .gform_required_legend {
+      margin-bottom: 0;
+    }
+
     .gform_description {
       display: block;
       margin-bottom: $paragraph-margin-bottom;
@@ -104,10 +110,16 @@
   }
 
   .gform_body {
-    margin-bottom: 1rem;
+    margin-bottom: $paragraph-margin-bottom;
   }
 
-   // Custom Ajax Spinner.
+  .gform_validation_container, // anti-spam honeypot
+  .gform_hidden {
+    @extend .visually-hidden;
+  }
+
+  /* Custom Ajax Spinner.
+  -------------------------------------------------------------- */
   @keyframes ajax-spinner {
     0% {
       transform: rotate(0deg);
@@ -126,13 +138,8 @@
     margin-left: 1rem;
   }
 
-  // Hidden
-  .gform_validation_container, // anti-spam honeypot
-  .gform_hidden {
-    @extend .visually-hidden;
-  }
-
-  // Validation
+  /* Validation.
+  -------------------------------------------------------------- */
   .gfield_required {
     color: $danger;
   }
@@ -153,15 +160,11 @@
 
     .gform_validation_error_link {
       @extend .alert-link;
-
-      font-weight: normal;
     }
-  }
 
-  select[aria-invalid="true"],
-  textarea[aria-invalid="true"],
-  input[aria-invalid="true"] {
-    border-color: rgba($form-feedback-invalid-color, 0.5);
+    &:focus {
+      outline-color: $warning;
+    }
   }
 }
 
@@ -183,20 +186,9 @@
   }
 }
 
-/* Reset :disabled when viewing the form with shortcode preview
--------------------------------------------------------------- */
-.mce-content-body {
-  .form-control,
-  .form-select {
-    &:disabled {
-      background-color: $input-bg;
-    }
-  }
-}
-
 /* Confirmation
 -------------------------------------------------------------- */
 .gform_confirmation_wrapper {
   @extend .alert;
-  @extend .alert-secondary;
+  @extend .alert-success;
 }
