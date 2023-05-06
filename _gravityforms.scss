@@ -9,7 +9,6 @@
  */
 
 @import "partials/labels-descriptions";
-@import "partials/fields-standard";
 @import "partials/fields-advanced";
 @import "partials/chosen";
 @import "partials/datepicker";
@@ -96,20 +95,45 @@
 
   /* General.
   -------------------------------------------------------------- */
-  .gform_heading {
-    .gform_required_legend {
-      margin-bottom: 0;
-    }
-
-    .gform_description {
-      display: block;
-      margin-bottom: $paragraph-margin-bottom;
-    }
-  }
-
   .gform_validation_container, // anti-spam honeypot
   .gform_hidden {
     @extend .visually-hidden;
+  }
+
+  /* Textarea.
+  -------------------------------------------------------------- */
+  .ginput_container_textarea {
+    .ginput_counter {
+      font-size: $font-size-sm;
+      margin-top: 0.25rem;
+      font-weight: 500;
+    }
+  }
+
+  /* Pages.
+  -------------------------------------------------------------- */
+  .gf_page_steps {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px dotted $border-color;
+    font-size: $font-size-sm;
+
+    .gf_step {
+      width: auto;
+      display: inline-block;
+      margin: 0.5rem 2rem 0.5rem 0;
+      opacity: 0.6;
+
+      span {
+        margin: 0 0.125rem;
+      }
+
+      &.gf_step_active {
+        opacity: 1;
+        font-weight: $font-weight-bold;
+      }
+    }
   }
 
   /* Custom Ajax Spinner.
@@ -128,7 +152,7 @@
     @extend .spinner-border;
     @extend .spinner-border-sm;
 
-    color: $primary;
+    color: $secondary;
     margin-left: 1rem;
   }
 
@@ -144,16 +168,8 @@
 
     font-size: $font-size-sm;
 
-    .gform_submission_error {
-      font-size: $font-size-sm;
-    }
-
-    ol {
-      margin: 0;
-    }
-
-    .gform_validation_error_link {
-      @extend .alert-link;
+    .validation_error {
+      margin-bottom: 0.5rem;
     }
 
     &:focus {
@@ -162,7 +178,7 @@
   }
 }
 
-/* Widget
+/* Widget.
 -------------------------------------------------------------- */
 .gform_widget {
   textarea,
@@ -180,7 +196,7 @@
   }
 }
 
-/* Confirmation
+/* Confirmation.
 -------------------------------------------------------------- */
 .gform_confirmation_wrapper {
   @extend .alert;

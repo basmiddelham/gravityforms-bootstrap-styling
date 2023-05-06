@@ -29,22 +29,14 @@
   /* Date- & Timefields.
   -------------------------------------------------------------- */
   .ginput_container_date {
-    position: relative;
-
-    .ui-datepicker-trigger {
-      position: absolute;
-      top: 14px;
-      right: 17px;
-    }
-
-    img {
+    img.ui-datepicker-trigger {
       display: none;
     }
 
     input.datepicker {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' version='1'%3E%3Cpath fill='%23999' d='M15 6V3h-2v1a1 1 0 1 1-2 0V3H5v1a1 1 0 1 1-2 0V3H1v3h14zm0 1H1v8h14V7zm-2-5h2l1 1v12l-1 1H1l-1-1V3l1-1h2V1a1 1 0 1 1 2 0v1h6V1a1 1 0 1 1 2 0v1z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
-      background-position: calc(100% - 1em) center;
+      background-position: calc(100% - 0.75em) center;
 
       &.datepicker_no_icon {
         background-image: none;
@@ -185,72 +177,6 @@
           border: none;
         }
       }
-    }
-  }
-
-  /* Password.
-  -------------------------------------------------------------- */
-  .password_input_container {
-    position: relative;
-    display: block;
-
-    button {
-      appearance: none;
-      background: 0 0;
-      border: none;
-      position: absolute;
-      text-align: center;
-      top: 0;
-      right: 0;
-      width: 40px;
-      height: $input-height;
-      background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'%3E%3Cpath d='M288 144a111 111 0 00-31 5 55 55 0 017 27 56 56 0 01-56 56 55 55 0 01-27-7 112 112 0 10107-81zm285 97C518 136 411 64 288 64S58 136 3 241a32 32 0 000 30c55 105 162 177 285 177s230-72 285-177a32 32 0 000-30zM288 400c-99 0-189-55-238-144 49-89 139-144 238-144s189 55 238 144a272 272 0 01-238 144z'/%3E%3C/svg%3E");
-      background-size: 20px 15px;
-      background-repeat: no-repeat;
-      background-position: center;
-
-      &[label="Hide Password"] {
-        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='currentColor' d='M634 471L36 4a16 16 0 00-22 2L4 18a16 16 0 002 23l598 467a16 16 0 0022-2l10-12a16 16 0 00-2-23zM297 146l135 106c-3-60-52-108-112-108a112 112 0 00-23 2zm46 220L208 260c3 60 52 108 112 108a113 113 0 0023-2zm-23-254c99 0 189 55 238 144a286 286 0 01-44 60l38 30a334 334 0 0053-75 32 32 0 000-30A321 321 0 00320 64c-37 0-72 7-105 19l47 36c19-4 38-7 58-7zm0 288c-99 0-189-55-238-144a285 285 0 0144-60l-38-30a334 334 0 00-53 75 32 32 0 000 30 321 321 0 00285 177c37 0 72-7 105-19l-47-36c-19 4-38 7-58 7z'/%3E%3C/svg%3E");
-      }
-
-      .dashicons {
-        display: none;
-      }
-    }
-  }
-
-  .gfield_password_strength {
-    font-size: $font-size-sm;
-    border: 1px solid $border-color;
-    margin: $grid-gutter-width 0 0;
-    text-align: center;
-    background-color: #eee;
-    border-bottom: 3px solid #ddd;
-    padding: 3px;
-
-    &.bad {
-      background-color: #ffb78c;
-      border-color: #ff853c;
-      border-bottom: 3px solid #ff853c;
-    }
-
-    &.good {
-      background-color: #ffec8b;
-      border-color: #fc0;
-      border-bottom: 3px solid #fc0;
-    }
-
-    &.mismatch,
-    &.short {
-      background-color: #ffa0a0;
-      border-color: #f04040;
-      border-bottom: 3px solid #f04040;
-    }
-
-    &.strong {
-      background-color: #c3ff88;
-      border-color: #8dff1c;
-      border-bottom: 3px solid #8dff1c;
     }
   }
 }
