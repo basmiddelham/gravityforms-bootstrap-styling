@@ -154,39 +154,38 @@
 
   /* File Upload.
   -------------------------------------------------------------- */
-  .ginput_container_fileupload {
+  .gfield--type-fileupload {
     .validation_message--hidden-on-empty:empty {
       display: none;
     }
 
-    .gform_fileupload_multifile {
-      width: 100%;
+    .gfield_validation_message {
+      @extend .alert;
+      @extend .alert-warning;
+      @extend .p-1;
+      @extend .mb-1;
+    }
 
-      .gfield_validation_message {
+    .ginput_preview_list {
+      .ginput_preview {
         @extend .alert;
-        @extend .alert-warning;
+        @extend .alert-light;
+        @extend .p-1;
+        @extend .mb-1;
+
+        > * {
+          margin-right: 0.5em;
+        }
+
+        .gform_delete_file {
+          @extend .btn;
+
+          padding: 0;
+          box-shadow: none;
+          border: none;
+        }
       }
     }
-
-    .gform_drop_area {
-      background: $gray-200;
-      border-radius: $border-radius;
-      border: $border-width dashed $border-color;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .gform_drop_instructions {
-      margin-right: 0.625rem;
-      font-size: $font-size-sm;
-    }
-  }
-
-  .gform_delete_file {
-    @extend .btn;
-    @extend .btn-link;
-
-    text-decoration: none;
   }
 
   /* Password.
