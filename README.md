@@ -8,7 +8,7 @@ Gravity Forms SASS styles for use in your Bootstrap enabled WordPress theme. Use
 
 ## Usage
 
-Import these styles into your build process. Please use these styles together with [Gravity Forms Bootstrap Hooks](https://github.com/MoshCat/gravityforms-bootstrap-hooks) for full functionality.
+Import these styles into your build process. Please use these styles together with [Gravity Forms Bootstrap Hooks](https://github.com/basmiddelham/gravityforms-bootstrap-hooks) for full functionality.
 
 Test your styling using this Gravity Forms [kitchensink form](https://github.com/basmiddelham/gravityforms-kitchensink).
 
