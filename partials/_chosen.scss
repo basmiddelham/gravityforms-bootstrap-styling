@@ -13,6 +13,7 @@ $chosen-sprite: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg
   font-size: $font-size-sm;
   user-select: none;
   width: 100% !important;
+  z-index: 1010;
   * {
     box-sizing: border-box;
   }

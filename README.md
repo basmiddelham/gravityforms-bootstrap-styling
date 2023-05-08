@@ -1,11 +1,13 @@
 # Gravity Forms Bootstrap 5 styling
+
 Gravity Forms SASS styles for use in your Bootstrap enabled WordPress theme. Use together with [Gravity Forms Bootstrap Hooks](https://github.com/basmiddelham/gravityforms-bootstrap-hooks).
 
-__Contributors:__ [Bas Middelham](https://github.com/basmiddelham)  
-__Requires:__ WordPress, Gravity Forms, Bootstrap 5.3.0-alpha3  
-__Tested up to:__ WordPress 6.2, Gravity Forms 2.7.4
+**Contributors:** [Bas Middelham](https://github.com/basmiddelham)  
+**Requires:** WordPress, Gravity Forms, Bootstrap 5.3.0-alpha3  
+**Tested up to:** WordPress 6.2, Gravity Forms 2.7.4
 
 ## Usage
+
 Import these styles into your build process. Please use these styles together with [Gravity Forms Bootstrap Hooks](https://github.com/MoshCat/gravityforms-bootstrap-hooks) for full functionality.
 
 Test your styling using this Gravity Forms [kitchensink form](https://github.com/basmiddelham/gravityforms-kitchensink).
@@ -13,6 +15,7 @@ Test your styling using this Gravity Forms [kitchensink form](https://github.com
 Check out the [demo](https://demo.middelham.nl/gravity-forms-kitchensink).
 
 ## License
+
 MIT License
 
 Copyright (c) 2023 Bas Middelham
