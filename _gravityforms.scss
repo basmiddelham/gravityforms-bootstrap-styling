@@ -174,7 +174,9 @@
     font-size: $font-size-sm;
 
     &:focus {
-      outline-color: $warning;
+      outline: none;
+      border: 1px solid $warning;
+      box-shadow: $box-shadow-sm;
     }
   }
 }
