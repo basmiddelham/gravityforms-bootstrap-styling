@@ -1,23 +1,9 @@
-/* stylelint-disable no-descending-specificity */
-
 /* Advanced Fields.
 -------------------------------------------------------------- */
 .gform_wrapper {
-  /* Consent field.
-  -------------------------------------------------------------- */
-  .gfield_consent_description {
-    background-color: $white;
-    max-height: 100px;
-    border: 1px solid $border-color;
-    margin-top: $spacer * 0.5;
-    padding: $spacer * 0.25;
-    overflow-y: auto;
-  }
-
-  /* Complex fields.
+  /* Name fields.
   -------------------------------------------------------------- */
   .ginput_complex {
-    // Name field.
     &.ginput_container_name {
       .name_prefix,
       .name_suffix {
@@ -47,36 +33,9 @@
   /* Lists.
   -------------------------------------------------------------- */
   .ginput_list {
-    // Layout.
-    .gform-grid-row {
-      display: flex;
-      flex-flow: column wrap;
-
-      @include media-breakpoint-up(sm) {
-        flex-flow: row nowrap;
-      }
-    }
-
-    .gfield_list_group_item,
-    .gform-field-label {
-      flex-grow: 1;
-    }
-
     .gfield_header_item--icons,
     .gfield_list_icons {
       width: 48px;
-    }
-
-    // Margins.
-    .gfield_list_group {
-      margin-bottom: 0.75rem;
-    }
-
-    @include media-breakpoint-up(sm) {
-      .gform-field-label + .gform-field-label,
-      .gfield_list_group_item + .gfield_list_group_item {
-        margin-left: 0.75rem;
-      }
     }
 
     // Mobile.
@@ -87,13 +46,9 @@
 
       .gfield_list_group {
         border: 1px solid $border-color;
-        display: block;
-        margin-bottom: 16px;
         padding: 16px;
 
         .gfield_list_group_item {
-          margin-bottom: 0.75rem;
-
           &::before {
             content: attr(data-label);
             font-size: $font-size-sm;
@@ -102,11 +57,10 @@
 
         .gfield_list_icons {
           background-color: $gray-200;
-          line-height: 0;
-          margin: 16px -16px -16px;
-          padding: 12px 16px;
-          text-align: left;
-          width: auto;
+          margin: 14px -16px -16px;
+          padding: 8px 16px;
+          box-sizing: content-box;
+          width: 100%;
 
           button {
             width: 20px;
@@ -148,34 +102,35 @@
   -------------------------------------------------------------- */
   .gfield--type-fileupload {
     .validation_message--hidden-on-empty:empty {
-      display: none;
+      display: none !important;
+    }
+
+    .gfield_validation_message,
+    .ginput_preview {
+      @extend .alert;
+      @extend .p-1;
+      @extend .mb-2;
+
+      font-size: $font-size-sm;
     }
 
     .gfield_validation_message {
-      @extend .alert;
       @extend .alert-warning;
-      @extend .p-1;
-      @extend .mb-1;
     }
 
-    .ginput_preview_list {
-      .ginput_preview {
-        @extend .alert;
-        @extend .alert-light;
-        @extend .p-1;
-        @extend .mb-1;
+    .ginput_preview {
+      @extend .alert-light;
 
-        > * {
-          margin-right: 0.5em;
-        }
+      > *:not(:last-child) {
+        margin-right: 0.5em;
+      }
 
-        .gform_delete_file {
-          @extend .btn;
-
-          padding: 0;
-          box-shadow: none;
-          border: none;
-        }
+      .gform_delete_file {
+        background-color: transparent;
+        color: $primary;
+        padding: 0;
+        border: none;
+        float: right;
       }
     }
   }

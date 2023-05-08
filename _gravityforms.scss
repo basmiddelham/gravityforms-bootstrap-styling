@@ -1,11 +1,10 @@
 /**
  * Gravity Forms Bootstrap styling
- * https://github.com/MoshCat/bootstrap-gravityforms
+ * https://github.com/basnmiddelham/bootstrap-gravityforms
  *
- * Gravity Forms SASS styles for use in your Bootstrap enabled WordPress theme.
+ * Gravity Forms SASS styles for use in your Bootstrap 5 enabled WordPress theme.
  * Please use these styles together with bootstrap-gravityforms-hooks for full functionality:
- * https://github.com/MoshCat/bootstrap-gravityforms-hooks
- *
+ * https://github.com/basnmiddelham/bootstrap-gravityforms-hooks
  */
 
 @import "partials/labels-descriptions";
@@ -93,20 +92,26 @@
     }
   }
 
-  /* General.
+  /* Hidden.
   -------------------------------------------------------------- */
   .gform_validation_container, // anti-spam honeypot
   .gform_hidden {
     @extend .visually-hidden;
   }
 
-  /* Textarea.
+  .gform_required_legend {
+    display: none;
+  }
+
+  /* Input Counter.
   -------------------------------------------------------------- */
-  .ginput_container_textarea {
-    .ginput_counter {
-      font-size: $font-size-sm;
-      margin-top: 0.25rem;
-      font-weight: 500;
+  .ginput_counter {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    font-weight: 500;
+
+    &.ginput_counter_tinymce {
+      float: right;
     }
   }
 
@@ -168,31 +173,9 @@
 
     font-size: $font-size-sm;
 
-    .validation_error {
-      margin-bottom: 0.5rem;
-    }
-
     &:focus {
       outline-color: $warning;
     }
-  }
-}
-
-/* Widget.
--------------------------------------------------------------- */
-.gform_widget {
-  textarea,
-  input[type="text"],
-  input[type="email"],
-  input[type="url"],
-  input[type="search"],
-  input[type="number"],
-  input[type="tel"] {
-    @extend .form-control-sm;
-  }
-
-  .gform_button {
-    @extend .btn-sm;
   }
 }
 

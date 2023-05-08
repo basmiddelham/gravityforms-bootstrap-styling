@@ -6,27 +6,22 @@
     @extend .visually-hidden;
   }
 
-  .gfield_description {
-    display: block;
-    line-height: 1.3;
-  }
-
   // Description margins.
   .field_description_below .gfield_description {
-    margin-top: 0.5em;
+    margin-top: $form-label-margin-bottom;
   }
 
   .field_description_above .gfield_description {
-    margin-bottom: 0.5em;
+    margin-bottom: $form-label-margin-bottom;
   }
 
   // Sub-label margins.
-  .field_sublabel_below label:not(.form-check-label) {
-    margin-top: 0.25em;
+  .field_sublabel_below label.gform-field-label--type-sub {
+    margin-top: $form-label-margin-bottom;
   }
 
-  .field_sublabel_above label:not(.form-check-label) {
-    margin-bottom: 0.25em;
+  .field_sublabel_above label.gform-field-label--type-sub {
+    margin-bottom: $form-label-margin-bottom;
   }
 
   // Labels left/right setting.
@@ -58,4 +53,3 @@
     }
   }
 }
-
