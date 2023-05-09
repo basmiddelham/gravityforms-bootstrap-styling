@@ -1,11 +1,6 @@
 /* Labels & Descriptions
 -------------------------------------------------------------- */
 .gform_wrapper {
-  .hidden_label > .gfield_label, // Hidden labels.
-  .field_sublabel_hidden_label label { // Hidden sublabels.
-    @extend .visually-hidden;
-  }
-
   // Description margins.
   .field_description_below .gfield_description {
     margin-top: $form-label-margin-bottom;

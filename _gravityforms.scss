@@ -18,6 +18,8 @@
 
   /* Hidden.
   -------------------------------------------------------------- */
+  .hidden_label > .gfield_label, // Hidden labels.
+  .field_sublabel_hidden_label label,
   .gform_validation_container, // anti-spam honeypot
   .gform_hidden {
     @extend .visually-hidden;
