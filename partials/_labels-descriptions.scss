@@ -1,25 +1,21 @@
-/* Labels & Descriptions
--------------------------------------------------------------- */
+/* 
+  Labels & Descriptions
+*/
+
 .gform_wrapper {
-  // Description margins.
-  .field_description_below .gfield_description {
+  /* Description below. */
+  .field_description_below .gfield_description, // Description.
+  .field_sublabel_below label.gform-field-label--type-sub { // Sub-label.
     margin-top: $form-label-margin-bottom;
   }
 
-  .field_description_above .gfield_description {
+  /* Description above. */
+  .field_description_above .gfield_description, // Description.
+  .field_sublabel_above label.gform-field-label--type-sub { // Sub-label.
     margin-bottom: $form-label-margin-bottom;
   }
 
-  // Sub-label margins.
-  .field_sublabel_below label.gform-field-label--type-sub {
-    margin-top: $form-label-margin-bottom;
-  }
-
-  .field_sublabel_above label.gform-field-label--type-sub {
-    margin-bottom: $form-label-margin-bottom;
-  }
-
-  // Labels left/right setting.
+  /* Labels left/right setting. */
   .right_label {
     .gfield_label {
       text-align: right;

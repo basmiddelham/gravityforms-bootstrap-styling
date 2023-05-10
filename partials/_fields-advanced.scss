@@ -1,8 +1,9 @@
-/* Advanced Fields.
--------------------------------------------------------------- */
+/* 
+  Advanced Fields.
+*/
+
 .gform_wrapper {
-  /* Name fields.
-  -------------------------------------------------------------- */
+  /* Name fields. */
   .ginput_complex {
     &.ginput_container_name {
       .name_prefix,
@@ -12,8 +13,7 @@
     }
   }
 
-  /* Date- & Timefields.
-  -------------------------------------------------------------- */
+  /* Date- & Timefields. */
   .ginput_container_date {
     img.ui-datepicker-trigger {
       display: none;
@@ -30,8 +30,7 @@
     }
   }
 
-  /* Lists.
-  -------------------------------------------------------------- */
+  /* Lists. */
   .ginput_list {
     .gfield_header_item--icons,
     .gfield_list_icons {
@@ -46,7 +45,7 @@
 
       .gfield_list_group {
         border: 1px solid $border-color;
-        padding: 16px;
+        padding: 8px;
 
         .gfield_list_group_item {
           &::before {
@@ -57,8 +56,8 @@
 
         .gfield_list_icons {
           background-color: $gray-200;
-          margin: 14px -16px -16px;
-          padding: 8px 16px;
+          margin: 14px -8px -8px;
+          padding: 8px;
           box-sizing: content-box;
           width: 100%;
 
@@ -98,8 +97,7 @@
     }
   }
 
-  /* File Upload.
-  -------------------------------------------------------------- */
+  /* File Upload. */
   .gfield--type-fileupload {
     .validation_message--hidden-on-empty:empty {
       display: none !important;
@@ -109,7 +107,7 @@
     .ginput_preview {
       @extend .alert;
       @extend .p-1;
-      @extend .mb-2;
+      @extend .mt-2;
 
       font-size: $font-size-sm;
     }

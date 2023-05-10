@@ -1,11 +1,11 @@
-/**
- * Gravity Forms Bootstrap styling
- * https://github.com/basmiddelham/bootstrap-gravityforms
- *
- * Gravity Forms SASS styles for use in your Bootstrap 5 enabled WordPress theme.
- * Please use these styles together with bootstrap-gravityforms-hooks for full functionality:
- * https://github.com/basmiddelham/bootstrap-gravityforms-hooks
- */
+/*
+  Gravity Forms Bootstrap styling
+  https://github.com/basmiddelham/bootstrap-gravityforms
+ 
+  Gravity Forms SASS styles for use in your Bootstrap 5 enabled WordPress theme.
+  Please use these styles together with bootstrap-gravityforms-hooks for full functionality:
+  https://github.com/basmiddelham/bootstrap-gravityforms-hooks
+*/
 
 @import "partials/labels-descriptions";
 @import "partials/fields-advanced";
@@ -14,31 +14,12 @@
 
 .gform_wrapper {
   margin-bottom: $spacer;
-  text-align: left;
 
   /* Hidden.
   -------------------------------------------------------------- */
-  .hidden_label > .gfield_label, // Hidden labels.
-  .field_sublabel_hidden_label label,
   .gform_validation_container, // anti-spam honeypot
   .gform_hidden {
     @extend .visually-hidden;
-  }
-
-  .gform_required_legend {
-    display: none;
-  }
-
-  /* Input Counter.
-  -------------------------------------------------------------- */
-  .ginput_counter {
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
-    font-weight: 500;
-
-    &.ginput_counter_tinymce {
-      float: right;
-    }
   }
 
   /* Pages.
@@ -65,26 +46,6 @@
         font-weight: $font-weight-bold;
       }
     }
-  }
-
-  /* Custom Ajax Spinner.
-  -------------------------------------------------------------- */
-  @keyframes ajax-spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  .gform_ajax_spinner {
-    @extend .spinner-border;
-    @extend .spinner-border-sm;
-
-    color: $secondary;
-    margin-left: 1rem;
   }
 
   /* Validation.
