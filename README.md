@@ -3,7 +3,7 @@
 Gravity Forms SASS styles for use in your Bootstrap enabled WordPress theme. Use together with [Gravity Forms Bootstrap Hooks](https://github.com/basmiddelham/gravityforms-bootstrap-hooks).
 
 **Contributors:** [Bas Middelham](https://github.com/basmiddelham)  
-**Requires:** WordPress, Gravity Forms, Bootstrap 5.3.0-alpha3  
+**Requires:** [Gravity Forms Bootstrap 5 Hooks](https://github.com/basmiddelham/gravityforms-bootstrap-hooks), Gravity Forms, Bootstrap 5.3.0-alpha3  
 **Tested up to:** WordPress 6.2, Gravity Forms 2.7.4
 
 ## Usage
