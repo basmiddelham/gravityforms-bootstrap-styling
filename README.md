@@ -12,7 +12,7 @@ Import these styles into your build process. Please use these styles together wi
 
 Test your styling using this Gravity Forms [kitchensink form](https://github.com/basmiddelham/gravityforms-kitchensink).
 
-Check out the [demo](https://demo.middelham.nl/gravity-forms-kitchensink).
+Check out the [demo](https://demo.middelham.nl/gravity-forms-bootstrap-5).
 
 ## License
 
