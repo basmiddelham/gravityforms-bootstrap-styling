@@ -5,13 +5,15 @@
 .gform_wrapper {
   /* Description below. */
   .field_description_below .gfield_description, // Description.
-  .field_sublabel_below label.gform-field-label--type-sub { // Sub-label.
+  .field_sublabel_below label.gform-field-label--type-sub {
+    // Sub-label.
     margin-top: $form-label-margin-bottom;
   }
 
   /* Description above. */
   .field_description_above .gfield_description, // Description.
-  .field_sublabel_above label.gform-field-label--type-sub { // Sub-label.
+  .field_sublabel_above label.gform-field-label--type-sub {
+    // Sub-label.
     margin-bottom: $form-label-margin-bottom;
   }
 

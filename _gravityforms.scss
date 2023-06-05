@@ -9,11 +9,16 @@
 
 @import "partials/labels-descriptions";
 @import "partials/fields-advanced";
-@import "partials/chosen";
+
+// @import "partials/chosen";
 @import "partials/datepicker";
 
 .gform_wrapper {
   margin-bottom: $spacer;
+
+  p.gform_description {
+    margin-bottom: 0 !important;
+  }
 
   /* Hidden.
   -------------------------------------------------------------- */
@@ -62,8 +67,7 @@
 
     &:focus {
       outline: none;
-      border: 1px solid $warning;
-      box-shadow: $box-shadow-sm;
+      box-shadow: $box-shadow;
     }
   }
 }
