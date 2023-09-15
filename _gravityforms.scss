@@ -16,7 +16,8 @@
 .gform_wrapper {
   margin-bottom: $spacer;
 
-  p.gform_description {
+  p.gform_description,
+  p.gform_required_legend {
     margin-bottom: 0 !important;
   }
 
